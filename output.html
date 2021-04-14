@@ -1,0 +1,43 @@
+<html>
+<body>
+<a href="index.html"><h3>На головну</h3></a>
+<form oninput="result.value=(kg.value*2.2).toFixed(2), result2.value=(kg.value*0.01).toFixed(2)">
+    <p>Ваша вага в кг: 
+    <input type="number" name="kg" autofocus=""></p>
+    <p>Ваша вага в фунтах: <output name="result">0</output></p>
+	<p>Ваша вага в центнерах: <output name="result2">0</output></p>
+</form>
+<p>
+</p>
+
+
+<h2> Введи 2 числа отримай сумму</h2>
+<form onsubmit="return false" oninput="o.value = a.valueAsNumber + b.valueAsNumber">
+  <input name="a" id="a" type="number" step="any"> +
+  <input name="b" id="b" type="number" step="any"> =
+  <output name="o" for="a b"></output>
+</form>
+
+<p>
+</p>
+<form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+  <label for="flying"><h2>Скільки ви хочете заробляти?</h2></label><p>
+  <input name="flevel" id="flying" type="range" min="0" max="100" value="0"> 
+ </p> <output for="flying" name="level">0</output>/100
+</form>
+<p>
+
+</p>
+<h3>Розрахуй ЗП</h3>
+<form onsubmit="return false" oninput="amount.value = (Години.valueAsNumber * Ставка.valueAsNumber) + ((Години.valueAsNumber * Ставка.valueAsNumber) * Податок.valueAsNumber)">
+
+ <p><label for="hours">Кількість годин</label>
+  <input type="number" min="0" id="Години" name="Години"></p>
+ <p><label for="rate">Ставка</label>
+  <span>грн.</span><input type="number" min="0" id="Ставка" name="Ставка"></p>
+ <p><label for="Податок">Податок</label>
+  <input type="number" min="0" id="Податок" value="0.30" name="Податок"></p>
+ <p>Зарплата всьго: <strong>грн.<output name="amount" for="Години Ставка Податок">0</output></strong></p>
+</form>
+</body>
+</html>
